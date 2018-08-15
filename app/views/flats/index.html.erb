@@ -1,0 +1,31 @@
+<h1>All flats (<%= "#{Flat.all.length}"%>)</h1>
+<div class="container">
+  <div class="row">
+      <% @flats.each do | flat | %>
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <div class="card-image">
+          </div>
+          <div class="card-body">
+            <div class="card-content">
+              <div class="flat-name">
+                <%= flat.name %>
+              </div>
+              <div class="flat-address">
+                <%= flat.address %>
+              </div>
+            </div>
+            <div class="flat-info">
+              <div class="flat-price">
+                 <i class="fas fa-dollar-sign"></i> <%= flat.price_per_night %>
+              </div>
+              <div class="flat-guests">
+               <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <% end %>
+  </div>
+</div>
